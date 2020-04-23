@@ -1,9 +1,7 @@
 import React from "react"
 import Layout from "../containers/Layout/Layout"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { readingTime } from "reading-time-estimator"
 import "./blog.scss"
 
 export const query = graphql`
