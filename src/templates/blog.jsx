@@ -3,6 +3,7 @@ import Layout from "../containers/Layout/Layout"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { readingTime } from "reading-time-estimator"
 import "./blog.scss"
 
 export const query = graphql`
@@ -23,17 +24,24 @@ export const query = graphql`
       }
       published(formatString: "Do, MMM YY")
       body {
+        fields {
+          readingTime {
+            text
+            minutes
+            time
+            words
+          }
+        }
         json
       }
     }
   }
 `
 
-const blog = ({ data }) => {
+const Blog = ({ data }) => {
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
-        console.log(node)
         const src = !!node.data.target.fields
           ? node.data.target.fields.file["en-US"].url
           : ""
@@ -41,6 +49,7 @@ const blog = ({ data }) => {
       },
     },
   }
+
   return (
     <Layout invert={true}>
       <div className="blog">
@@ -60,7 +69,12 @@ const blog = ({ data }) => {
             <span> | </span>
             <span>{data.contentfulBlogPost.published}</span>
             <span> | </span>
-            <span>time to read</span>
+            <span>
+              {Math.ceil(
+                data.contentfulBlogPost.body.fields.readingTime.minutes
+              )}{" "}
+              mins
+            </span>
           </div>
         </div>
         <img
@@ -98,4 +112,4 @@ const blog = ({ data }) => {
   )
 }
 
-export default blog
+export default Blog

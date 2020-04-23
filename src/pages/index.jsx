@@ -9,12 +9,13 @@ import "animate.css/animate.min.css"
 import Footer from "../components/Footer/Footer"
 
 import TPI from "../components/TPI/TPI"
-import Card from "../components/Card/Card"
 import CardList from "../containers/CardList/CardList"
+import Head from "../components/Head/Head"
 
 const index = ({ windowWidth }) => {
   return (
     <div>
+      <Head />
       <div className="index-main">
         {windowWidth > 768 ? <DHeader /> : <Header />}
         <Hero />

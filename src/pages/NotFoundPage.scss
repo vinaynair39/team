@@ -1,0 +1,21 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.nf404 {
+  @include flexCenter(column);
+  height: 80vh;
+  & h1 {
+    margin-top: 8rem;
+    font-size: 5vh;
+    color: $color-title;
+  }
+  & a {
+    font-size: 5vh;
+    color: $color;
+  }
+  & img {
+    margin-top: 2rem;
+
+    height: 50vh;
+  }
+}

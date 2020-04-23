@@ -1,0 +1,14 @@
+{
+  contentfulBlogPost {
+    body {
+      fields {
+        readingTime {
+          text
+          minutes
+          time
+          words
+        }
+      }
+    }
+  }
+}

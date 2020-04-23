@@ -9,6 +9,9 @@
 
 .Header__logo {
   height: 100%;
+  & img {
+    height: 5.5vh;
+  }
   padding-top: 0.5vh;
   display: flex;
   align-items: center;
@@ -16,7 +19,7 @@
 
 .Header__burger {
   position: relative;
-  left: 3vw;
+  left: 0.7rem;
   z-index: 10;
 }
 
