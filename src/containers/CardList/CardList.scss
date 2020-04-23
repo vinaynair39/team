@@ -1,0 +1,46 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.CardList__items {
+  @include flexBetween(row);
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.CardList {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  padding-top: 3.5vh;
+  & h1 {
+    margin-top: 5vh;
+    font-size: 2em;
+    padding-bottom: 4vh;
+    text-align: center;
+    color: $color-title;
+  }
+
+  @include media(">tablet") {
+    font-size: 4vh;
+    & h1 {
+      padding-bottom: 15vh;
+    }
+  }
+}
+
+.CardList__arrows {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  @include media(">tablet") {
+    justify-content: flex-end;
+    & img {
+      height: 5vh;
+      &:first-child {
+        padding-right: 5rem;
+      }
+    }
+  }
+  padding: 7vh 5vw;
+  padding-bottom: 10vh;
+}

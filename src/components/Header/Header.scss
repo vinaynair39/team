@@ -1,0 +1,101 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.Header {
+  height: 5vh;
+  background-color: transparent;
+  @include flexBetween(row);
+}
+
+.Header__logo {
+  height: 100%;
+  padding-top: 0.5vh;
+  display: flex;
+  align-items: center;
+}
+
+.Header__burger {
+  position: relative;
+  left: 3vw;
+  z-index: 10;
+}
+
+.Header__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  color: white;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0.98;
+
+  &.Header__menu-open {
+    visibility: visible;
+  }
+
+  @include media(">tablet") {
+    position: static;
+    width: 100vw;
+  }
+}
+
+.Header__nav-menu {
+  display: flex;
+  @include flexCenter(column);
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  opacity: 0;
+  @include transition-ease;
+
+  @include media(">tablet") {
+    height: 6vh;
+    opacity: 1;
+    & a {
+      color: white;
+    }
+  }
+
+  &.Header__menu-open {
+    a {
+      color: white;
+      font-size: 2rem;
+    }
+    opacity: 1;
+  }
+
+  .Header__nav-item {
+    padding-bottom: 10vh;
+    transform: translateY(10vh);
+    opacity: 0;
+    @include transition-ease;
+
+    & li {
+      list-style: none;
+    }
+
+    &.Header__menu-open {
+      @include transition-ease;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    &.active > a {
+      background-color: $color;
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.navLink {
+  margin: 1rem;
+}
+
+@for $i from 1 through 4 {
+  .Header__nav-item:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.15s;
+  }
+}

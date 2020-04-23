@@ -1,0 +1,105 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.Footer {
+  margin-top: 10vh;
+  padding: 2vh 2.5vh;
+  height: 20vh;
+  color: white;
+  display: grid;
+  grid-template-rows: 1fr 2fr 0.5fr;
+  background-color: #212421;
+
+  @include media(">tablet") {
+    padding: 2rem 5rem;
+    grid-template-rows: 0.7fr 2fr 0.5fr;
+    height: 35vh;
+  }
+}
+
+.Footer__title {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  font-size: 1.7vh;
+  @include media(">tablet") {
+    font-size: 2.5vh;
+  }
+}
+
+.Footer__title-others {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  & h4 {
+    font-weight: lighter;
+  }
+}
+
+.Footer__content {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  & h4 {
+    font-weight: 100;
+    font-size: 1.5vh;
+    color: $color-grey;
+    @include media(">tablet") {
+      font-size: 2.5vh;
+    }
+  }
+}
+.Footer__content-logo {
+  & h4 {
+    padding-right: 1rem;
+  }
+}
+
+.Footer__content-others {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.Footer__copy {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.Footer__copyright {
+  font-size: 1vh;
+  color: $color-grey;
+  @include media(">tablet") {
+    font-size: 2vh;
+  }
+}
+
+.Footer__copy-subscribe {
+  display: flex;
+  align-items: center;
+
+  & input {
+    width: 36vw;
+    height: 2vh;
+    border: none;
+    border-radius: 2px;
+    margin-right: 2vw;
+  }
+  & button {
+    width: 50px;
+    height: 18px;
+    font-size: 1vh;
+  }
+
+  @include media(">tablet") {
+    & input {
+      width: 20vw;
+      height: 4vh;
+      border: none;
+      border-radius: 2px;
+      margin-right: 2vw;
+    }
+    & button {
+      width: 5vw;
+      height: 5vh;
+      border-radius: 2px;
+      font-size: 2vh;
+    }
+  }
+}

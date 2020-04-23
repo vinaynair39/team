@@ -1,0 +1,119 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.Hero {
+  padding-top: 20vh;
+  text-align: center;
+  font-size: 2.7vh;
+  letter-spacing: 1px;
+  font-weight: bold;
+  & span {
+    color: $color;
+  }
+  & h1 {
+    color: white;
+  }
+
+  & p {
+    padding-top: 1.5vh;
+    color: white;
+    font-weight: 400;
+    font-size: 2vh;
+  }
+
+  @include media(">tablet") {
+    text-align: start;
+    width: 50%;
+    padding-top: 15vh;
+    font-size: 5vh;
+    & h1 {
+      font-weight: 500;
+    }
+    & p {
+      padding-top: 1.5vh;
+      color: white;
+      font-weight: 400;
+      font-size: 3vh;
+      padding-bottom: 2vh;
+      width: 85%;
+    }
+  }
+
+  @include media(">500px", "<tablet") {
+    text-align: center;
+    padding-top: 20vh;
+    font-size: 4vh;
+    & h1 {
+      font-weight: 500;
+    }
+    & p {
+      padding-top: 1.5vh;
+      color: white;
+      font-weight: 400;
+      font-size: 2.5vh;
+      padding-bottom: 2vh;
+      width: 85%;
+    }
+  }
+}
+
+.Hero__input {
+  padding-top: 5vh;
+  display: flex;
+  padding-bottom: 33vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  & input {
+    width: 65vw;
+    height: 4vh;
+    border: 2px;
+    margin-right: 5vw;
+    border-radius: 2px;
+    padding-left: 2vw;
+    &::placeholder {
+      color: $color-grey;
+    }
+  }
+  & button {
+    width: 20vw;
+    border-radius: 2px;
+    height: 4vh;
+    font-size: 1vh;
+    font-size: 1.8vh;
+  }
+
+  @include media(">tablet") {
+    margin: 0;
+    & input {
+      width: 20vw;
+      height: 2.2rem;
+      margin-right: 1vw;
+      padding-left: 1vw;
+    }
+
+    & button {
+      width: 7vw;
+      border-radius: 2px;
+      height: 2.2rem;
+      font-size: 2.3vh;
+    }
+  }
+
+  @include media(">500px", "<tablet") {
+    justify-content: center;
+    margin: 0;
+    & input {
+      width: 60%;
+      height: 2.2rem;
+      margin-right: 1rem;
+      padding-left: 1vw;
+    }
+
+    & button {
+      width: 20%;
+      border-radius: 2px;
+      height: 2.2rem;
+      font-size: 2.3vh;
+    }
+  }
+}

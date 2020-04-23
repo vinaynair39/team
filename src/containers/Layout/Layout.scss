@@ -1,0 +1,8 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+.Layout {
+  padding: 1rem 5rem;
+  @include media("<tablet") {
+    padding: 2.5vh;
+  }
+}

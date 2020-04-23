@@ -5,20 +5,36 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.20.12",
+    "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "animate.css": "^3.7.2",
+    "gatsby": "^2.20.26",
+    "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-offline": "^3.1.2",
     "gatsby-plugin-react-helmet": "^3.2.2",
+    "gatsby-plugin-sass": "^2.2.3",
     "gatsby-plugin-sharp": "^2.5.3",
+    "gatsby-source-contentful": "^2.2.9",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-sharp": "^2.4.3",
+    "hamburger-react": "^2.0.0",
+    "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-awesome-slider": "^4.1.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "react-rating": "^2.0.5",
+    "react-window-size": "^1.2.2"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
+    "env-cmd": "^10.1.0",
     "prettier": "2.0.4"
   },
   "keywords": [
@@ -27,7 +43,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "env-cmd -f .env gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

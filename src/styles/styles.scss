@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap");
+
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  font-family: $font-family-1;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: white;
+  background: $color;
+  font-family: "Cabin", sans-serif;
+  cursor: pointer;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
+  }
+}
+a {
+  color: $color-title;
+  text-decoration: none;
+}
+
+p {
+  line-height: 3.5vh;
+}

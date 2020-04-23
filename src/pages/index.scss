@@ -1,0 +1,23 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.index-main {
+  background-image: url("/mobile-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  height: 100%;
+  padding: 2.5vh;
+
+  @include media(">tablet") {
+    background-image: url("/2.jpg");
+    padding: 1rem 5rem;
+  }
+}
+
+.index-others {
+  padding: 2.5vh;
+  @include media(">tablet") {
+    padding: 1rem 5rem;
+  }
+}

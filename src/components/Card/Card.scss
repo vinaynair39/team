@@ -1,0 +1,76 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.Card {
+  padding: 4vh;
+  display: flex;
+  flex-direction: column;
+  height: 55vh;
+  width: 99%;
+  @include media(">500px", "<tablet") {
+    width: 70%;
+  }
+  border-radius: 20px;
+  box-shadow: 1px 3px 8px 1px #ccc;
+  & p {
+    font-size: 2.5vh;
+    color: $color-title;
+  }
+
+  @include media(">tablet") {
+    width: 20rem;
+    min-width: 18rem;
+    height: 60vh;
+    margin-right: 2rem;
+    & p {
+      font-size: 2.5vh;
+      font-weight: 500;
+      line-height: 162%;
+    }
+
+    &:last-child {
+      margin-right: 0rem;
+    }
+  }
+}
+
+.Card__stars {
+  text-align: center;
+  & img {
+    margin-right: 3vw;
+  }
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+  @include media(">tablet") {
+    & img {
+      margin-right: 1vw;
+    }
+  }
+}
+
+.Card__author {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  & img {
+    margin-right: 1vh;
+    @include media(">tablet") {
+      height: 10vh;
+      margin-right: 2vh;
+    }
+  }
+}
+
+.Card__author-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-title;
+  & h5 {
+    font-size: 2.5vh;
+  }
+  & p {
+    font-size: 2vh;
+    color: $color-grey;
+  }
+}
