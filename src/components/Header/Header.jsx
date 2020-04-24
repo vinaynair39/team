@@ -8,13 +8,21 @@ const Header = ({ invert }) => {
 
   return (
     <header>
-      <div className="Header">
+      <div className="Header animated fadeIn">
         <div className="Header__logo">
           <Link to="/">
             {invert ? (
-              <img className="Header__img-invert" src="/logo-dark.svg" alt="" />
+              <img
+                className="Header__img-invert animated fadeIn"
+                src="/logo-dark.svg"
+                alt=""
+              />
             ) : (
-              <img className="Header__img" src={"/logo-desktop.svg"} alt="" />
+              <img
+                className="Header__img animated fadeIn"
+                src={"/logo-desktop.svg"}
+                alt=""
+              />
             )}
           </Link>
           {/* <img src="/logo.png" alt="" /> */}

@@ -5,12 +5,16 @@ import "./Header.scss"
 const Header = ({ invert = false }) => {
   return (
     <header>
-      <div className="DHeader">
+      <div className="DHeader animated fadeIn">
         <div className="DHeader__logo">
           <Link to="/">
             <img
               src={invert ? "/logo-dark.svg" : "/logo-desktop.svg"}
-              className={invert ? "DHeader__img2" : "DHeader__img"}
+              className={
+                invert
+                  ? "DHeader__img2 animated fadeIn"
+                  : "DHeader__img animated fadeIn"
+              }
               alt=""
             />
           </Link>

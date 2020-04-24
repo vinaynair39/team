@@ -26,14 +26,18 @@ const TPI = ({
           <h1>{title}</h1>
           {pMobile || (desktop && <p>{paragraph}</p>)}
           {desktop && link && (
-            <Link className={"TPI__link2"} to={linkTo}>
+            <Link to="/blog/contentful" className={"TPI__link2"} to={linkTo}>
               <img src="/learn more.svg" alt="" />
             </Link>
           )}
         </div>
         <img className={cut ? "TPI__cut" : ""} src={imageUrl} alt="" />
         {!desktop && link && (
-          <Link className={cut ? "TPI__link" : "TPI__link2"} to={linkTo}>
+          <Link
+            to="/blog/contentful"
+            className={cut ? "TPI__link" : "TPI__link2"}
+            to={linkTo}
+          >
             <img src="/learn more.jpg" alt="" />
           </Link>
         )}
