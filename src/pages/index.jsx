@@ -1,6 +1,7 @@
 import React from "react"
-import windowSize from "react-window-size"
 import "./index.scss"
+import sizes from "react-sizes"
+
 import Hero from "../components/Hero/Hero"
 import Header from "../components/Header/Header"
 import DHeader from "../components/DesktopHeader/Header"
@@ -12,12 +13,12 @@ import TPI from "../components/TPI/TPI"
 import CardList from "../containers/CardList/CardList"
 import Head from "../components/Head/Head"
 
-const index = ({ windowWidth }) => {
+const index = ({ desktop }) => {
   return (
     <div>
       <Head />
       <div className="index-main">
-        {windowWidth > 768 ? <DHeader /> : <Header />}
+        {desktop ? <DHeader /> : <Header />}
         <Hero />
       </div>
       <div className="index-others">
@@ -27,7 +28,7 @@ const index = ({ windowWidth }) => {
           paragraph={
             "Project dicussions, important documents, free food announcements; they all live tidily together in Team. With your team and information in one easily  searchable place, collaborating online is as easy as collaborating in person "
           }
-          imageUrl={windowWidth > 768 ? "/dashboard2.jpg" : "/dashboard.jpg"}
+          imageUrl={desktop ? "/dashboard2.jpg" : "/dashboard.jpg"}
           link={true}
           linkTo={"/features"}
           cut={true}
@@ -42,7 +43,7 @@ const index = ({ windowWidth }) => {
           paragraph={
             "Project dicussions, important documents, free food announcements; they all live tidily together in Team. With your team and information in one easily  searchable place, collaborating online is as easy as collaborating in person "
           }
-          imageUrl={windowWidth > 768 ? "/asset3.jpg" : "/asset1.jpg"}
+          imageUrl={desktop ? "/asset3.jpg" : "/asset1.jpg"}
           link={true}
           pMobile={false}
           linkTo={"/features"}
@@ -53,7 +54,7 @@ const index = ({ windowWidth }) => {
           paragraph={
             "Project dicussions, important documents, free food announcements; they all live tidily together in Team. With your team and information in one easily  searchable place, collaborating online is as easy as collaborating in person "
           }
-          imageUrl={windowWidth > 768 ? "/asset4.jpg" : "/asset2.jpg"}
+          imageUrl={desktop ? "/asset4.jpg" : "/asset2.jpg"}
           link={true}
           linkTo={"/features"}
           pMobile={false}
@@ -64,5 +65,7 @@ const index = ({ windowWidth }) => {
     </div>
   )
 }
-
-export default windowSize(index)
+const mapSizesToProps = ({ width }) => ({
+  desktop: !width || width > 768,
+})
+export default sizes(mapSizesToProps)(index)

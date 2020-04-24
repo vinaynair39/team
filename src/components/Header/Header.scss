@@ -36,11 +36,6 @@
   &.Header__menu-open {
     visibility: visible;
   }
-
-  @include media(">tablet") {
-    position: static;
-    width: 100vw;
-  }
 }
 
 .Header__nav-menu {
@@ -49,19 +44,16 @@
   height: 100vh;
   overflow: hidden;
   background-color: black;
+  color: white;
+  & a {
+    color: white;
+    font-size: 2rem;
+  }
   opacity: 0;
   @include transition-ease;
 
-  @include media(">tablet") {
-    height: 6vh;
-    opacity: 1;
-    & a {
-      color: white;
-    }
-  }
-
   &.Header__menu-open {
-    a {
+    & a {
       color: white;
       font-size: 2rem;
     }
@@ -79,7 +71,7 @@
     }
 
     &.Header__menu-open {
-      @include transition-ease;
+      // @include transition-ease;
       transform: translateY(0);
       opacity: 1;
     }

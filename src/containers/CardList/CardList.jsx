@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
-import windowSize from "react-window-size"
 import { data } from "./data"
+import sizes from "react-sizes"
+
 import ScrollAnimation from "react-animate-on-scroll"
 
 import "./CardList.scss"
@@ -69,4 +70,8 @@ const CardList = ({ windowWidth }) => {
   )
 }
 
-export default windowSize(CardList)
+const mapSizesToProps = ({ width }) => ({
+  windowWidth: !width || width,
+})
+
+export default sizes(mapSizesToProps)(CardList)

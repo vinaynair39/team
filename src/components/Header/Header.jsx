@@ -36,28 +36,28 @@ const Header = ({ invert }) => {
               isOpen ? "Header__nav-item Header__menu-open" : "Header__nav-item"
             }
           >
-            <Link to="/team">team</Link>
+            <Link to="/blog/contentful">Blog</Link>
           </li>
           <li
             className={
               isOpen ? "Header__nav-item Header__menu-open" : "Header__nav-item"
             }
           >
-            <Link to="/services">services</Link>
+            <Link to="/services">Services</Link>
           </li>
           <li
             className={
               isOpen ? "Header__nav-item Header__menu-open" : "Header__nav-item"
             }
           >
-            <Link to="/contact">contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
           <li
             className={
               isOpen ? "Header__nav-item Header__menu-open" : "Header__nav-item"
             }
           >
-            <Link to="/login">login</Link>
+            <Link to="/login">Login</Link>
           </li>
         </ul>
       </nav>
