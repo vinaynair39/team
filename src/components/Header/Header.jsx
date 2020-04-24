@@ -8,7 +8,7 @@ const Header = ({ invert }) => {
 
   return (
     <header>
-      <div className="Header animated fadeIn">
+      <div className="Header">
         <div className="Header__logo">
           <Link to="/">
             {invert ? (
