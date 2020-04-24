@@ -38,7 +38,7 @@ const TPI = ({
             className={cut ? "TPI__link" : "TPI__link2"}
             to={linkTo}
           >
-            <img src="/learn more.jpg" alt="" />
+            <img src="/learn.svg" alt="" />
           </Link>
         )}
       </div>
