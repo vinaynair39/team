@@ -37,8 +37,12 @@ const Header = ({ invert }) => {
           />
         </div>
       </div>
-      <nav className={isOpen ? "Header__nav Header__menu-open" : "Header__nav"}>
+      <nav
+        className={isOpen ? "Header__nav Header__menu-open" : "Header__nav"}
+        onClick={() => setOpen(false)}
+      >
         <ul
+          onClick={() => setOpen(false)}
           className={
             isOpen ? "Header__nav-menu Header__menu-open" : "Header__nav-menu"
           }
