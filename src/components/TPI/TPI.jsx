@@ -32,7 +32,7 @@ const TPI = ({
           )}
         </div>
         <img className={cut ? "TPI__cut" : ""} src={imageUrl} alt="" />
-        {desktop && link && (
+        {!desktop && link && (
           <Link className={cut ? "TPI__link" : "TPI__link2"} to={linkTo}>
             <img src="/learn more.jpg" alt="" />
           </Link>
@@ -51,6 +51,7 @@ TPI.propTypes = {
   animationStyle: PropTypes.string,
   pMobile: PropTypes.bool,
   linkTo: PropTypes.string,
+  desktop: PropTypes.bool,
 }
 
 const mapSizesToProps = ({ width }) => ({

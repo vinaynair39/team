@@ -9,9 +9,9 @@
 
 .Header__logo {
   height: 100%;
-  & img {
-    height: 5.5vh;
-  }
+  // & img {
+  //   height: 5.5vh;
+  // }
   padding-top: 0.5vh;
   display: flex;
   align-items: center;
@@ -23,6 +23,13 @@
   z-index: 10;
 }
 
+.Header__img-invert {
+  height: 1.5rem;
+}
+
+.Header__img {
+  height: 2.8rem;
+}
 .Header__nav {
   position: fixed;
   top: 0;

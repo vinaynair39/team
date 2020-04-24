@@ -6,7 +6,6 @@ import Hero from "../components/Hero/Hero"
 import Header from "../components/Header/Header"
 import DHeader from "../components/DesktopHeader/Header"
 import "animate.css/animate.min.css"
-
 import Footer from "../components/Footer/Footer"
 
 import TPI from "../components/TPI/TPI"
@@ -18,7 +17,7 @@ const index = ({ desktop }) => {
     <div>
       <Head />
       <div className="index-main">
-        {desktop ? <DHeader /> : <Header />}
+        {!desktop ? <Header /> : <DHeader />}
         <Hero />
       </div>
       <div className="index-others">
@@ -28,7 +27,7 @@ const index = ({ desktop }) => {
           paragraph={
             "Project dicussions, important documents, free food announcements; they all live tidily together in Team. With your team and information in one easily  searchable place, collaborating online is as easy as collaborating in person "
           }
-          imageUrl={desktop ? "/dashboard2.jpg" : "/dashboard.jpg"}
+          imageUrl={!desktop ? "/dashboard.jpg" : "/dashboard2.jpg"}
           link={true}
           linkTo={"/features"}
           cut={true}

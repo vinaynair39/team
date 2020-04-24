@@ -11,7 +11,11 @@ const Header = ({ invert }) => {
       <div className="Header">
         <div className="Header__logo">
           <Link to="/">
-            <img src={invert ? "/logo-dark.svg" : "/logo-desktop.svg"} alt="" />
+            {invert ? (
+              <img className="Header__img-invert" src="/logo-dark.svg" alt="" />
+            ) : (
+              <img className="Header__img" src={"/logo-desktop.svg"} alt="" />
+            )}
           </Link>
           {/* <img src="/logo.png" alt="" /> */}
         </div>
