@@ -17,7 +17,7 @@ const index = ({ desktop }) => {
     <div>
       <Head />
       <div className="index-main">
-        {!desktop ? <Header /> : <DHeader />}
+        {desktop ? <DHeader /> : <Header />}
         <Hero />
       </div>
       <div className="index-others">
